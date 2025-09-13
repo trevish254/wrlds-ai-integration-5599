@@ -1,4 +1,3 @@
-
 import { ArrowLeft, CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
@@ -6,6 +5,7 @@ import { useEffect } from 'react';
 import PageLayout from '@/components/PageLayout';
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
+import SEO from '@/components/SEO';
 
 const About = () => {
   // Scroll to top on mount
@@ -15,6 +15,11 @@ const About = () => {
   
   return (
     <PageLayout>
+      <SEO 
+        title="About Aventis - African Innovation Hub"
+        description="Learn about Aventis, an African innovation hub building digital solutions, creative media, and ventures that empower growth across the continent."
+        keywords={['about aventis', 'african innovation hub', 'digital solutions', 'creative media', 'ventures', 'innovation team']}
+      />
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto">
           <div className="max-w-6xl mx-auto">
@@ -29,7 +34,7 @@ const About = () => {
               transition={{ duration: 0.5 }} 
               className="text-4xl font-bold mb-6"
             >
-              About WRLDS Technologies
+              About Aventis
             </motion.h1>
             
             <div className="prose prose-lg max-w-none">
@@ -39,7 +44,7 @@ const About = () => {
                 transition={{ duration: 0.5, delay: 0.2 }} 
                 className="text-xl text-gray-600 mb-12"
               >
-                We're a team of innovators dedicated to revolutionizing smart textile technology for industries worldwide.
+                Aventis is an African innovation hub that builds technology, creativity, and ventures to empower people and businesses across the continent.
               </motion.p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
@@ -51,12 +56,13 @@ const About = () => {
                 >
                   <h2 className="text-3xl font-bold">Our Mission</h2>
                   <p className="text-gray-600">
-                    At WRLDS Technologies, we're on a mission to transform ordinary textiles into intelligent, 
-                    data-driven solutions that improve safety, performance, and quality of life across industries.
+                    At Aventis, we're on a mission to transform ideas into impactful solutions that help people, 
+                    communities, and businesses grow. We believe in the power of combining technology, creativity, 
+                    and entrepreneurship to create lasting change.
                   </p>
                   <p className="text-gray-600">
-                    We believe that by embedding intelligence into everyday fabrics, we can create a more 
-                    connected, responsive, and safer world.
+                    Through our three core divisions - Digital Solutions, Creative Media, and Ventures - we provide 
+                    comprehensive support for businesses ready to innovate and scale.
                   </p>
                 </motion.div>
                 
@@ -74,15 +80,15 @@ const About = () => {
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-gray-700 mt-1 mr-3 flex-shrink-0" />
-                      <span><strong>Quality:</strong> We're committed to excellence in every sensor, algorithm, and solution we deliver.</span>
+                      <span><strong>Excellence:</strong> We're committed to delivering exceptional quality in every project and partnership.</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-gray-700 mt-1 mr-3 flex-shrink-0" />
-                      <span><strong>Collaboration:</strong> We work closely with our clients to ensure their unique needs are met.</span>
+                      <span><strong>Collaboration:</strong> We work closely with our partners to ensure their unique needs and visions are realized.</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-gray-700 mt-1 mr-3 flex-shrink-0" />
-                      <span><strong>Impact:</strong> We measure success by the tangible differences our technology makes in the real world.</span>
+                      <span><strong>Impact:</strong> We measure success by the tangible differences our solutions make in real communities.</span>
                     </li>
                   </ul>
                 </motion.div>
@@ -97,19 +103,19 @@ const About = () => {
                 <h2 className="text-3xl font-bold mb-6">Our Story</h2>
                 <div className="bg-white rounded-xl border border-gray-200 p-8 shadow-sm">
                   <p className="text-gray-600 mb-4">
-                    We started with the ambition to make an inherently scattered and complex development area modular, 
-                    smart and available to analog brands. After successfully raising millions of dollars for development, 
-                    we spent the first two years in full code mode.
+                    Aventis was born from the vision to create a truly integrated innovation hub that addresses 
+                    the diverse needs of growing African businesses. We started with the understanding that success 
+                    requires more than just technology - it requires creativity, strategic thinking, and sustainable business models.
                   </p>
                   <p className="text-gray-600 mb-4">
-                    The goal was to turn all the scattered hardware and building blocks into simple modules to be 
-                    assembled like Lego. During this time we took in a range of customers for whom we built prototypes - 
-                    a way for us to make sure what we built had bearing in real world use cases.
+                    Our founders recognized that African businesses needed a partner who understood both global standards 
+                    and local contexts. This led to our unique three-division approach: Digital Solutions for technological 
+                    advancement, Creative Media for compelling storytelling, and Ventures for sustainable growth.
                   </p>
                   <p className="text-gray-600">
-                    In 2023 we felt we had reached a technology level allowing us to start working on enterprise level. 
-                    Since then, we have focused on textile integrations because of the enormous potential smart textiles 
-                    have across multiple industries from healthcare to public safety.
+                    Today, Aventis serves as a bridge between ideas and impact, helping businesses transform their vision 
+                    into reality through innovative solutions that drive growth and create lasting value for communities 
+                    across Africa.
                   </p>
                 </div>
               </motion.div>
@@ -122,8 +128,8 @@ const About = () => {
               >
                 <h2 className="text-3xl font-bold mb-6">Our Team</h2>
                 <p className="text-gray-600 mb-8">
-                  Our diverse team combines expertise in textile engineering, electronics, software development, 
-                  artificial intelligence, and industry-specific knowledge to deliver holistic solutions.
+                  Our diverse team combines expertise in technology, creative media, business development, 
+                  and innovation strategy to deliver holistic solutions for our partners.
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -131,25 +137,25 @@ const About = () => {
                     {
                       name: "Felix von Heland",
                       role: "CEO and Founder",
-                      bio: "Leading WRLDS Technologies with a vision to transform the future of smart textiles.",
+                      bio: "Leading Aventis with a vision to transform African business innovation through technology and creativity.",
                       image: "/lovable-uploads/aa5291bd-2417-4c1e-9a02-0bcc71a92507.png"
                     },
                     {
                       name: "Niek Bijman",
-                      role: "Software Lead",
-                      bio: "Specializing in cloud infrastructure and APIs for seamless data integration.",
+                      role: "Digital Solutions Lead",
+                      bio: "Specializing in web development, AI integration, and cloud infrastructure for scalable digital solutions.",
                       image: "/lovable-uploads/e502f601-c519-43a8-86f5-5fa89ae50d2f.png"
                     },
                     {
                       name: "Chengjie Li",
-                      role: "Hardware Lead",
-                      bio: "Expert in embedded systems engineering, leading our hardware development efforts.",
+                      role: "Technology Architect",
+                      bio: "Expert in system architecture and technical innovation, driving our technology development efforts.",
                       image: "/lovable-uploads/3de85ddd-15e1-4216-9697-f91abb9a47ce.png"
                     },
                     {
-                      name: "Love",
+                      name: "Love Anderberg",
                       role: "COO",
-                      bio: "Overseeing daily operations and ensuring business objectives are met effectively.",
+                      bio: "Overseeing operations and partnerships, ensuring seamless execution across all Aventis divisions.",
                       image: "/lovable-uploads/a9bb9110-964a-43b0-a5ab-7162140cd133.png"
                     }
                   ].map((member, i) => (

@@ -1,8 +1,10 @@
-import { ArrowLeft, CheckCircle, Clock, FileSearch, Settings, Cpu, Code, Truck, BarChart, Check } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Clock, FileSearch, Settings, Cpu, Code, Truck, BarChart, Check, Palette, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useState, useRef, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import PageLayout from '@/components/PageLayout';
+import SEO from '@/components/SEO';
+
 const DevelopmentProcess = () => {
   const [activeProcess, setActiveProcess] = useState(1);
   const processRef = useRef<HTMLDivElement>(null);
@@ -16,33 +18,35 @@ const DevelopmentProcess = () => {
   // Process component logic
   const processes = [{
     id: 1,
-    title: "Textile Sensor Design",
-    description: "We begin by designing custom textile sensors specifically for your industry and use case, selecting appropriate conductive materials and sensor types.",
-    steps: ["Industry-specific requirement analysis", "Sensor type and material selection", "Prototype sensor development", "Initial testing and calibration"]
+    title: "Discovery & Strategy",
+    description: "We begin by understanding your business goals, target market, and growth opportunities to develop a comprehensive strategy for success.",
+    steps: ["Business goals assessment", "Market research and analysis", "Competitive landscape evaluation", "Strategic roadmap development"]
   }, {
     id: 2,
-    title: "Garment Integration",
-    description: "Our engineering team seamlessly integrates sensors into clothing and footwear while maintaining comfort, durability, and washability.",
-    steps: ["Ergonomic placement optimization", "Non-intrusive integration techniques", "Durability and washability testing", "Comfort and user experience validation"]
+    title: "Creative Development",
+    description: "Our creative team develops compelling brand identities, visual designs, and content strategies that resonate with your target audience.",
+    steps: ["Brand identity design", "Visual concept development", "Content strategy creation", "Creative asset production"]
   }, {
     id: 3,
-    title: "AI & Data Analytics",
-    description: "We develop specialized algorithms that transform textile sensor data into actionable insights unique to your industry requirements.",
-    steps: ["Industry-specific algorithm development", "ML model training with domain data", "Real-time analytics implementation", "Insight delivery optimization"]
+    title: "Technical Implementation",
+    description: "We build robust digital solutions using cutting-edge technology, ensuring scalability, security, and optimal performance.",
+    steps: ["Technical architecture design", "Development and programming", "Quality assurance testing", "Performance optimization"]
   }, {
     id: 4,
-    title: "Production & Certification",
-    description: "We handle manufacturing, quality control, and ensure all textile sensor products meet relevant industry standards and certifications.",
-    steps: ["Textile manufacturing partner selection", "Quality assurance processes", "Industry-specific certification procurement", "Initial production supervision"]
+    title: "Launch & Deployment",
+    description: "We handle the complete launch process, from final testing to deployment, ensuring smooth market entry and user adoption.",
+    steps: ["Pre-launch testing and validation", "Deployment and go-live support", "User training and onboarding", "Launch marketing coordination"]
   }, {
     id: 5,
-    title: "Deployment & Support",
-    description: "We provide comprehensive training, implementation assistance, and ongoing support to ensure successful adoption and continuous improvement.",
-    steps: ["User training and onboarding", "Data interpretation guidance", "Performance monitoring", "Continuous improvement iterations"]
+    title: "Growth & Optimization",
+    description: "We provide ongoing support, analytics, and optimization to ensure continued growth and maximum return on investment.",
+    steps: ["Performance monitoring and analytics", "User feedback collection", "Continuous improvement implementation", "Growth strategy refinement"]
   }];
+
   useEffect(() => {
     processSectionsRef.current = processes.map((_, i) => processSectionsRef.current[i] || null);
   }, []);
+
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       if (entries[0].isIntersecting) {
@@ -58,6 +62,7 @@ const DevelopmentProcess = () => {
     }
     return () => observer.disconnect();
   }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       const viewportHeight = window.innerHeight;
@@ -84,36 +89,13 @@ const DevelopmentProcess = () => {
     setTimeout(handleScroll, 100);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  const developmentSteps = [{
-    icon: <FileSearch className="h-6 w-6" />,
-    title: "1. Discovery & Requirements",
-    description: "We begin by understanding your needs, market opportunities, and technical requirements to establish clear project parameters and goals."
-  }, {
-    icon: <Settings className="h-6 w-6" />,
-    title: "2. Concept & Design",
-    description: "Our experts craft initial designs and technical specifications, ensuring alignment with your brand identity and user experience goals."
-  }, {
-    icon: <Cpu className="h-6 w-6" />,
-    title: "3. Hardware Development",
-    description: "We select, design, and integrate sensor components, creating optimized hardware solutions that balance performance and efficiency."
-  }, {
-    icon: <Code className="h-6 w-6" />,
-    title: "4. Software Development",
-    description: "Our development team builds robust firmware, apps, and cloud platforms tailored to your product's unique requirements and user needs."
-  }, {
-    icon: <CheckCircle className="h-6 w-6" />,
-    title: "5. Testing & Iteration",
-    description: "Rigorous testing protocols ensure reliability, durability, and optimal performance across all conditions and use cases."
-  }, {
-    icon: <Truck className="h-6 w-6" />,
-    title: "6. Production & Deployment",
-    description: "We support the transition from prototype to manufacturing, ensuring quality standards and seamless deployment."
-  }, {
-    icon: <BarChart className="h-6 w-6" />,
-    title: "7. Continuous Improvement",
-    description: "Post-launch analytics and feedback loops drive ongoing improvements, updates, and potential new features."
-  }];
+
   return <PageLayout>
+      <SEO 
+        title="Innovation Process - Aventis"
+        description="Discover Aventis' structured innovation process that transforms ideas into successful ventures through strategic planning, creative development, and technical excellence."
+        keywords={['aventis process', 'innovation methodology', 'business development', 'digital transformation process', 'creative development']}
+      />
       <section className="pt-24 pb-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
@@ -122,15 +104,15 @@ const DevelopmentProcess = () => {
               Back to Home
             </Link>
             
-            <h1 className="text-4xl font-bold mb-8">Our Structured Development Process</h1>
+            <h1 className="text-4xl font-bold mb-8">Our Innovation Process</h1>
             
             <div className="prose prose-lg max-w-none">
               <p className="text-xl text-gray-600 mb-12">
-                We've refined our development methodology to minimize risk and maximize innovation, 
-                ensuring your textile sensor project moves efficiently from concept to reality.
+                Aventis has developed a comprehensive methodology that transforms ideas into successful ventures, 
+                minimizing risk while maximizing innovation and impact across African markets.
               </p>
               
-              {/* From Textile to Intelligence Process Section */}
+              {/* Innovation Process Section */}
               <div className="relative mt-12" ref={processRef} style={{
               opacity: 0
             }}>
@@ -166,33 +148,63 @@ const DevelopmentProcess = () => {
                 </div>
               </div>
               
+              {/* Three Divisions Integration */}
               <div className="bg-gray-50 p-8 rounded-lg my-12 border border-gray-100">
-                <h3 className="text-xl font-semibold mb-4">Our Development Principles</h3>
+                <h3 className="text-xl font-semibold mb-6">Integrated Division Approach</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {[
+                    {
+                      icon: <Code className="w-6 h-6 text-blue-600" />,
+                      title: "Digital Solutions",
+                      description: "Technology infrastructure and digital platforms that power your business growth."
+                    },
+                    {
+                      icon: <Palette className="w-6 h-6 text-purple-600" />,
+                      title: "Creative Media",
+                      description: "Brand storytelling and visual experiences that connect with your audience."
+                    },
+                    {
+                      icon: <Truck className="w-6 h-6 text-green-600" />,
+                      title: "Ventures",
+                      description: "Business development and product innovation that creates sustainable value."
+                    }
+                  ].map((division, i) => (
+                    <div key={i} className="bg-white p-4 rounded-lg border border-gray-200">
+                      <div className="flex items-center gap-2 mb-2">
+                        {division.icon}
+                        <h4 className="font-semibold">{division.title}</h4>
+                      </div>
+                      <p className="text-gray-600 text-sm">{division.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="bg-gray-50 p-8 rounded-lg my-12 border border-gray-100">
+                <h3 className="text-xl font-semibold mb-4">Our Innovation Principles</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 mr-2" />
-                    <span>Rapid iteration cycles for continuous improvement</span>
+                    <span>Rapid iteration cycles with continuous feedback integration</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 mr-2" />
-                    <span>Transparent communication throughout the development process</span>
+                    <span>Transparent communication and collaborative partnerships</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 mr-2" />
-                    <span>Modular architecture allowing for flexible and scalable solutions</span>
+                    <span>Scalable architecture designed for African market conditions</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 mr-2" />
-                    <span>Risk mitigation strategies built into every phase</span>
+                    <span>Risk mitigation strategies built into every development phase</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 mr-2" />
-                    <span>Focus on user experience and practical functionality</span>
+                    <span>Focus on sustainable impact and community value creation</span>
                   </li>
                 </ul>
               </div>
-              
-              
             </div>
             
             <div className="mt-12 pt-8 border-t border-gray-200">
@@ -206,6 +218,7 @@ const DevelopmentProcess = () => {
       </section>
     </PageLayout>;
 };
+
 export default DevelopmentProcess;
 
 // Helper icon component for later

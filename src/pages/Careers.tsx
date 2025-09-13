@@ -1,9 +1,9 @@
-
 import PageLayout from '@/components/PageLayout';
 import { ArrowLeft, Mail, Linkedin, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import { useEffect } from 'react';
+import SEO from '@/components/SEO';
 
 const Careers = () => {
   useEffect(() => {
@@ -13,6 +13,11 @@ const Careers = () => {
   return (
     <div className="min-h-screen bg-white">
       <PageLayout showContact={false}>
+        <SEO 
+          title="Careers - Join Aventis"
+          description="Join Aventis, an African innovation hub. We're looking for passionate innovators to help build digital solutions, creative media, and ventures."
+          keywords={['aventis careers', 'jobs', 'african innovation hub jobs', 'digital solutions careers', 'creative media jobs']}
+        />
         <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto">
             <div className="max-w-6xl mx-auto">
@@ -37,7 +42,7 @@ const Careers = () => {
                   transition={{ duration: 0.5, delay: 0.2 }} 
                   className="text-xl text-gray-600 mb-4"
                 >
-                  We're looking for passionate innovators to help us revolutionize the smart textile industry.
+                  We're looking for passionate innovators to help us build the future of African business innovation.
                 </motion.p>
                 
                 <motion.p
@@ -46,7 +51,7 @@ const Careers = () => {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   className="text-xl text-gray-600 mb-12"
                 >
-                  We welcome both full-time professionals and interns who are eager to contribute to groundbreaking technology.
+                  Join Aventis and be part of a team that's transforming ideas into impactful solutions across Digital Solutions, Creative Media, and Ventures.
                 </motion.p>
                 
                 <motion.div 
@@ -55,20 +60,20 @@ const Careers = () => {
                   transition={{ duration: 0.6 }}
                   className="mb-16"
                 >
-                  <h2 className="text-3xl font-bold mb-6">Why Join WRLDS?</h2>
+                  <h2 className="text-3xl font-bold mb-6">Why Join Aventis?</h2>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                     {[
                       {
-                        title: "Innovation",
-                        description: "Work on cutting-edge technology that's changing multiple industries."
+                        title: "Innovation Impact",
+                        description: "Work on groundbreaking projects that drive real change across African markets and communities."
                       },
                       {
-                        title: "Impact",
-                        description: "Create solutions that enhance safety, performance, and quality of life."
+                        title: "Multi-Division Growth",
+                        description: "Develop skills across technology, creativity, and business development in our integrated approach."
                       },
                       {
-                        title: "Growth",
-                        description: "Develop your skills in a rapidly expanding field with diverse challenges."
+                        title: "African Focus",
+                        description: "Help build solutions specifically designed for African businesses and market conditions."
                       }
                     ].map((benefit, i) => (
                       <div key={i} className="bg-gray-50 p-6 rounded-lg border border-gray-100 h-full">
@@ -76,6 +81,54 @@ const Careers = () => {
                         <p className="text-gray-600">{benefit.description}</p>
                       </div>
                     ))}
+                  </div>
+
+                  {/* Current Opportunities */}
+                  <div className="bg-white rounded-xl border border-gray-200 p-8 shadow-sm mb-12">
+                    <h3 className="font-bold text-xl mb-6">Open Opportunities</h3>
+                    <div className="space-y-4">
+                      {[
+                        {
+                          role: "Digital Solutions Developer",
+                          division: "Digital Solutions",
+                          description: "Full-stack development, AI integration, and SaaS platform development for African businesses.",
+                          type: "Full-time"
+                        },
+                        {
+                          role: "Creative Media Specialist",
+                          division: "Creative Media",
+                          description: "Branding, content creation, photography, videography, and creative campaign development.",
+                          type: "Full-time"
+                        },
+                        {
+                          role: "Business Development Associate",
+                          division: "Ventures",
+                          description: "Market research, business model development, and venture creation across various industries.",
+                          type: "Full-time"
+                        },
+                        {
+                          role: "Innovation Intern",
+                          division: "All Divisions",
+                          description: "Cross-divisional experience in technology, creativity, and business development.",
+                          type: "Internship"
+                        }
+                      ].map((job, i) => (
+                        <div key={i} className="border border-gray-100 rounded-lg p-6 hover:bg-gray-50 transition-colors">
+                          <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                            <div className="flex-1">
+                              <h4 className="font-semibold text-lg">{job.role}</h4>
+                              <p className="text-gray-600 text-sm">{job.division}</p>
+                              <p className="text-gray-700 mt-2">{job.description}</p>
+                            </div>
+                            <div className="mt-3 md:mt-0 md:ml-4">
+                              <span className="inline-block px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
+                                {job.type}
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                   
                   <div className="bg-white rounded-xl border border-gray-200 p-8 shadow-sm mt-12">
@@ -90,9 +143,9 @@ const Careers = () => {
                         <h3 className="text-xl font-bold text-gray-900">Love Anderberg</h3>
                         <p className="text-gray-600 mb-4">COO</p>
                         <div className="flex flex-col space-y-3">
-                          <a href="mailto:love@wrlds.com" className="flex items-center text-gray-700 hover:text-blue-600">
+                          <a href="mailto:love@aventis.com" className="flex items-center text-gray-700 hover:text-blue-600">
                             <Mail className="w-5 h-5 mr-2" />
-                            love@wrlds.com
+                            love@aventis.com
                           </a>
                           <a 
                             href="https://www.linkedin.com/in/love-anderberg-67549a174/" 
