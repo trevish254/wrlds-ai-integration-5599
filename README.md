@@ -1,4 +1,6 @@
-# Welcome to your Lovable project
+# Aventis
+
+Aventis is an African innovation hub delivering Digital Solutions, Creative Media, and Ventures that empower growth and innovation.
 
 ## Project info
 
