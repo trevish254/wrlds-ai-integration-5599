@@ -14,7 +14,7 @@ const ContactInfo = () => {
             Contact Us Today
           </h2>
           <p className="text-gray-700 text-lg max-w-2xl mx-auto">
-            Have questions about our AI-powered sensor solutions? Reach out to our team and let's discuss how we can help bring your ideas to life.
+            Have questions about our innovation services? Reach out to our team and let's discuss how we can help transform your ideas into impactful solutions.
           </p>
         </div>
 
@@ -30,9 +30,9 @@ const ContactInfo = () => {
               <h3 className="text-xl font-bold text-gray-900">Felix von Heland</h3>
               <p className="text-gray-600 mb-4">CEO and Founder</p>
               <div className="flex flex-col space-y-3">
-                <a href="mailto:felix@wrlds.com" className="flex items-center text-gray-700 hover:text-blue-600">
+                <a href="mailto:felix@aventis.com" className="flex items-center text-gray-700 hover:text-blue-600">
                   <Mail className="w-5 h-5 mr-2" />
-                  felix@wrlds.com
+                  felix@aventis.com
                 </a>
                 <a 
                   href="https://www.linkedin.com/in/felixvonheland/" 
@@ -58,9 +58,9 @@ const ContactInfo = () => {
               <h3 className="text-xl font-bold text-gray-900">Love Anderberg</h3>
               <p className="text-gray-600 mb-4">COO</p>
               <div className="flex flex-col space-y-3">
-                <a href="mailto:love@wrlds.com" className="flex items-center text-gray-700 hover:text-blue-600">
+                <a href="mailto:love@aventis.com" className="flex items-center text-gray-700 hover:text-blue-600">
                   <Mail className="w-5 h-5 mr-2" />
-                  love@wrlds.com
+                  love@aventis.com
                 </a>
                 <a 
                   href="https://www.linkedin.com/in/love-anderberg-67549a174/" 

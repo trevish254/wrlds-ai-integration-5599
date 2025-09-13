@@ -1,4 +1,3 @@
-
 import { useState, useRef, useEffect, TouchEvent } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -8,50 +7,50 @@ import { useIsMobile } from "@/hooks/use-mobile";
 const projects = [
   {
     id: 1,
-    title: "6th SENSE Safety System",
-    brand: "FireCat Group",
-    description: "AI-driven sensor solution integrated into uniforms for law enforcement, military and firefighters, providing real-time vital monitoring and situational awareness in high-risk environments.",
-    tags: ["Safety", "Military", "AI Sensors", "Real-time Monitoring"],
+    title: "Brand Identity & Digital Platform",
+    brand: "African Tech Startup",
+    description: "Complete brand development and web application for a fintech startup, including logo design, brand guidelines, and custom SaaS platform development.",
+    tags: ["Branding", "Web Development", "FinTech", "Digital Platform"],
     imageUrl: "/lovable-uploads/93ab0638-8190-4ccf-897f-21fda7f4f5ad.png",
     isFeatured: true,
     link: "/projects/firecat",
     details: `
-      FireCat Group aimed to enhance safety in high-risk environments. WRLDS Technologies provided the 6th SENSE solution with secure real-time data transmission, high-quality sensors resistant to extreme conditions, integrated AI-powered clothing, and a centralized control unit. Features include Man Down Alarm, GPS positioning, vital sign monitoring, and Panic Button. Benefits: life-saving technology, machine learning preventing false alarms, durable hardware with 7-10 year lifespan, washable sensors, and Plug & Play installation with 12-20 hours of operation per charge.
+      African Tech Startup needed a complete brand identity and digital platform. Aventis provided comprehensive branding including logo design, brand guidelines, and marketing materials, plus a custom web application with user dashboard, payment integration, and mobile-responsive design. The result was a professional brand presence that attracted investors and a scalable platform that supported rapid user growth.
     `
   },
   {
     id: 2,
-    title: "Performance Athletic Footwear",
-    brand: "Global Sports Retail Leader",
-    description: "Smart Footwear R&D aiming to revolutionize development, fitting, and testing of athletic footwear.",
-    tags: ["Sports", "R&D", "Footwear", "Athletic Performance"],
+    title: "E-commerce Platform & Marketing",
+    brand: "Fashion Retail Brand",
+    description: "Full-service digital transformation including e-commerce website, product photography, and integrated marketing campaigns.",
+    tags: ["E-commerce", "Photography", "Marketing", "Fashion"],
     imageUrl: "/lovable-uploads/b0622048-17b4-4c75-a3f0-6c9e17de1d09.png",
     link: "/projects/sport-retail"
   },
   {
     id: 3,
-    title: "Workwear Climate Control",
-    brand: "European Multinational Textile Producer",
-    description: "Fully integrated temperature controls for professionals working in extreme heat and cold. Modular approach to enable full-body systems.",
-    tags: ["Climate Control", "Workwear", "Temperature Regulation", "Extreme Conditions"],
+    title: "Corporate Video Production",
+    brand: "Manufacturing Company",
+    description: "High-quality corporate video production including CGI & VFX for product demonstrations and company profile videos.",
+    tags: ["Video Production", "CGI", "VFX", "Corporate"],
     imageUrl: "/lovable-uploads/6b0637e9-4a7b-40d0-b219-c8b7f879f93e.png",
     link: "/projects/workwear"
   },
   {
     id: 4,
-    title: "Ice Hockey Elite Skill Tracker",
-    brand: "Mars Blades",
-    description: "R&D product evaluating data from single IMU embedded in the hockey shoe. Aim: establish motion patterns that lead to ultimate acceleration, speed, and maneuverability.",
-    tags: ["Ice Hockey", "Motion Analysis", "Performance Tracking", "Sports"],
+    title: "Mobile App & User Experience",
+    brand: "Health & Wellness Startup",
+    description: "Custom mobile application development with intuitive user experience design and backend API integration.",
+    tags: ["Mobile App", "UX Design", "Healthcare", "API Integration"],
     imageUrl: "/lovable-uploads/c30e0487-2fa0-41d1-9a0b-699cb2855388.png",
     link: "/projects/hockey"
   },
   {
     id: 5,
-    title: "Dog Activity Counter",
-    brand: "UK Insurance Giant",
-    description: "R&D project embedding a step counter in a dog collar. Measures daily activity and sends real-time data to the cloud for veterinary consultancies.",
-    tags: ["Pet Technology", "Insurance", "Activity Tracking", "R&D"],
+    title: "Event Branding & Interior Design",
+    brand: "Luxury Hotel Chain",
+    description: "Complete event branding and interior design for hotel launch, including signage, decor, and immersive experience design.",
+    tags: ["Event Design", "Interior Design", "Luxury", "Hospitality"],
     imageUrl: "/lovable-uploads/d5ce901e-2ce0-4f2a-bce1-f0ca5d6192df.png",
     link: "/projects/pet-tracker"
   }
@@ -130,13 +129,13 @@ const Projects = () => {
       <div className="w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className={`text-center mb-10 max-w-3xl mx-auto transition-all duration-1000 ${isInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-block mb-2 px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm font-medium">
-            Customer Cases
+            Success Stories
           </div>
           <h2 className="text-3xl font-bold mb-3">
-            From Textile to Intelligence
+            From Ideas to Impact
           </h2>
           <p className="text-gray-600">
-            Explore how our textile sensor technology is revolutionizing multiple industries with intelligent fabric solutions tailored to specific needs.
+            Explore how Aventis transforms business ideas into successful ventures across Digital Solutions, Creative Media, and innovative business models.
           </p>
           {isMobile && (
             <div className="flex items-center justify-center mt-4 animate-pulse-slow">
